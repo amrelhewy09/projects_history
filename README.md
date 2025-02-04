@@ -18,3 +18,7 @@
 2) Comments and activites have to be paginated aswell like projects
 3) I added google openid auth for simple sign up and to leverage the first and last names
 4) UI isn't the best thing ever but i used tailwind along with flowbite https://flowbite.com/ to speed things up :)
+
+
+## Deployment
+Deployed on heroku -> https://projectshistory-6bbeefdc1559.herokuapp.com/
