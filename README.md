@@ -4,7 +4,7 @@
 - We only leave comments and change status just for now
 2) **How many statuses are there for a project? and what are they?**
 - There are 4 statuses; To do, In progress, In review, Done
-3) **Can statuses be changed from an inital state to ANY other state or only specific states (e.g from to do to in progress only?)?**
+3) **Can statuses be changed from an inital state to ANY other state or only specific states (e.g from to do to in progress only)?**
 - For now assume they can be changed to anything, later on we could use a state machine (AASM gem for example), to handle transitions from/to specific statuses
 3) **Can i reply to a comment?**
 - You can only leave a comment on the project no replies (if i have time i will allow editing)
