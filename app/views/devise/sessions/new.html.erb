@@ -1,0 +1,37 @@
+<div class="flex flex-col items-center min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+  <div class="w-full max-w-md space-y-8">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "space-y-6" }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="mb-5">
+        <%= f.label :email, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "bg border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+      </div>
+
+      <div class="mb-5">
+        <%= f.label :password, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="flex items-start mb-5">
+          <div class="flex items-center h-5">
+            <%= f.check_box :remember_me, class: "w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" %>
+          </div>
+          <%= f.label :remember_me, class: "ms-2 text-sm font-medium text-gray-900 dark:text-gray-300" %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Log in", class: "dark:text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %>
+      </div>
+    <% end %>
+
+    <div class="mt-6">
+      <%= button_to user_google_oauth2_omniauth_authorize_path, method: :post, data: { turbo: "false" }, class: "w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium dark:text-white bg-gray-700 hover:bg-gray focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" do %>
+        <span class="sr-only">Login with Google</span>
+        <svg class="w-5 h-5 mr-2" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" class="svg-inline--fa fa-google fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8c0-17.8-1.6-35.2-4.6-52H250v98.4h135.4c-5.8 31.4-23.2 57.8-49.4 75.6v62.6h79.8c46.8-43.2 73.8-106.8 73.8-184.6zM250 500c67.2 0 123.4-22.4 164.6-60.6l-79.8-62.6c-22.4 15-50.8 24-84.8 24-65.2 0-120.4-44-140-103.4H25.4v64.8C66.6 453.4 153.4 500 250 500zM110 303.4c-4.8-15-7.6-30.8-7.6-47.4s2.8-32.4 7.6-47.4v-64.8H25.4C9.2 176.6 0 212.4 0 250s9.2 73.4 25.4 105.4l84.6-64.8zM250 100c35.4 0 67 12.2 92 32.2l69.2-69.2C353.4 24.6 303.4 0 250 0 153.4 0 66.6 46.6 25.4 117.4l84.6 64.8C129.6 144 184.8 100 250 100z"></path></svg>
+        Login with Google
+      <% end %>
+    </div>
+  </div>
+</div>

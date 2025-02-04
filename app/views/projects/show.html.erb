@@ -1,0 +1,11 @@
+<div class="flex flex-col py-12 px-4 sm:px-6 lg:px-8">
+<%= link_to "Back", projects_path,  class: "dark:text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %>
+
+  <%= render 'project', project: @project %>
+  <div class="flex flex-col justify-center w-64 mt-5 overflow-y-scroll h-32 p-5">
+  <% @project_comments.each do |comment| %>
+    <%= render 'comments/comment', comment: comment %>
+  <% end %>
+</div>
+  <%= render 'comments/form', resource: @project.comments.new %>
+</div>

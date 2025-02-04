@@ -1,0 +1,14 @@
+<div class="flex flex-col min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+  <% if @projects.empty? %>
+    <p class="text-center dark:text-white">No projects found.</p>
+  <% else %>
+    <div class="grid grid-cols-2 gap-4 mb-4">
+      <% @projects.each do |project| %>
+        <%= render 'project_card', resource: project %>
+      <% end %>
+    </div>
+    <div class="dark:text-white text-center mt-8 pt-5">
+      <%= paginate @projects %>
+    </div>
+  <% end %>
+</div>
