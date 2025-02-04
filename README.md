@@ -17,10 +17,9 @@
 
 ## Considerations to be taken
 1) Activities (project audit) can be logged in a background job after the status update happens as it can be eventually consistent (log of status changes)
-2) The audit usually would have the old obejct and new one, since this is unnecessary i just have a string field carrying whatever old and new state that exist, along with a activity_type (e.g status_change)
-3) Comments and activites have to be paginated aswell like projects
-4) I added google openid auth for simple sign up and to leverage the first and last names
-5) UI isn't the best thing ever but i used tailwind along with flowbite https://flowbite.com/ to speed things up :)
+2) Comments and activites have to be paginated aswell like projects
+3) I added google openid auth for simple sign up and to leverage the first and last names
+4) UI isn't the best thing ever but i used tailwind along with flowbite https://flowbite.com/ to speed things up :)
 
 
 ## Deployment
