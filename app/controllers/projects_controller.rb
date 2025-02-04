@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project_activities = @project.project_activities.includes(:user).order(created_at: :desc)
-    @project_comments = @project.comments.includes(:user).order(created_at: :desc)
+    @project_comments = @project.comments.includes(:user).order(:created_at)
   end
 
   def update
