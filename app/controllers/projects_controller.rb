@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action :set_project , only: [:show, :update]
 
   def index
-    @projects = Project.order(created_at: :desc).page(params[:page])
+    @projects = Project.order(:created_at).page(params[:page])
   end
 
   def show
