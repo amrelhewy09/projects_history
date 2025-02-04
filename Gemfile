@@ -22,7 +22,7 @@ gem "jbuilder"
 # gem "kredis"
 gem 'pg'
 gem 'devise', '~> 4.9.0'
-gem 'cancancan', '~> 3.5.0'
+gem 'cancancan', '~> 3.6.1'
 gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
 
