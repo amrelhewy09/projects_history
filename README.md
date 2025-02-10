@@ -20,7 +20,8 @@
 2) Comments and activites have to be paginated aswell like projects
 3) I added google openid auth for simple sign up and to leverage the first and last names
 4) UI isn't the best thing ever but i used tailwind along with flowbite https://flowbite.com/ to speed things up :)
-5) We could use some authorization gem like cancancan to allow certain users to view certain projects, etc 
+5) We could use some authorization gem like cancancan to allow certain users to view certain projects, etc
+6) utilize rails hotwire for partial updates to the screen (adding comments, status updates, etc)
 
 
 ## Deployment
